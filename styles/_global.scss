@@ -1,0 +1,55 @@
+$blue: #091C4E;
+$gold: #AD8A13;
+
+@mixin fontSize($number, $weight) {
+	font-size: $number * 1px;
+	font-size: ($number / 10) * 1rem;
+	font-weight: ($weight);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include fontSize(16, 400);
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	text-align: center;
+	line-height: 1.5;
+}
+
+
+.up {
+	text-transform: uppercase;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}

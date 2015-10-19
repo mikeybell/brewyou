@@ -1,0 +1,317 @@
+@import 'setup';
+@import 'global';
+
+$blue: #091C4E;
+$gold: #AD8A13;
+$red: #CF0D0D;
+
+
+
+/* HEADER */
+
+header {
+	background: url(../img/whitediamond.png);
+	padding: 60px 0;
+	text-align: center;
+	position: relative;
+}
+
+h1 {
+	font-family: 'Fredoka One', cursive;
+	font-size: 3.5rem;
+	line-height: 1;
+	text-transform: uppercase;
+	color: white;
+	margin: 0;
+	text-align: center;
+}
+
+h1.h1-top {
+	position: absolute;
+	top: 125px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+h1.h1-bottom {
+	position: absolute;
+	top: 160px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+h2 {
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 2rem;
+	line-height: 1;
+	text-transform: uppercase;
+	color: $red;
+	margin: 20px 0 0 0;	
+}
+
+
+/* FORM */
+
+section.form {
+	background: url(../img/cheers.jpg) center fixed;
+	background-size: cover;
+	padding: 50px 0;
+}
+
+section.form .cash {
+	margin-bottom: 30px;
+	padding: 15px;
+	border-radius: 10px;
+	border: 0;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: $gold;
+	text-align: center;
+	width: 120px;
+}
+
+section.form .submit-form {
+	background: rgba(255,255,255,0.75);
+	width: 40%;
+	margin: 0 auto;
+	padding: 20px 30px;
+	border-radius: 10px;
+	border: 1px solid #979797;
+	text-align: center;
+}
+
+section.form .radio-btn {
+	margin: 20px 0;
+	font-weight: 400;
+	color: $blue;
+	label {
+		margin-left: 5px;
+	}
+}
+
+section.form input[type=submit] {
+	margin-top: 10px;
+	padding: 10px 30px;
+	background: #F4F4F4;
+	border: 1px solid #979797;
+	border-radius: 10px;
+}
+
+section.form input[type=submit]:hover {
+	background: $gold;
+	color: $blue;
+	transition: 0.4s;
+}
+
+
+/* BEER */
+section.beer {
+	background: url(../img/whitediamond.png);
+	padding: 60px;
+	display: none;
+}
+
+section.beer h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+h3 {
+	margin: 10px 0;
+	line-height: 1.2;
+	color: $blue;
+}
+
+h3.name {
+	color: $blue;
+	font-weight: 400;
+}
+
+h3.total {
+	color: $blue;
+	background: lightgrey;
+	border: 1px solid $gold;
+	border-radius: 10px;
+	font-size: 2.5rem;
+	padding: 5px 0;
+	margin: 0 auto;
+}
+
+h3.price {
+	color: $gold;
+}
+
+
+section.beer #beerwork {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+section.beer .beer-box {
+	// background: linear-gradient(white, #E8E8E8);
+	background: white;
+	margin-bottom: 30px;
+	padding: 20px;
+	width: calc(33% - 40px);
+	border: 1px solid $gold;
+	border-radius: 10px;
+	img {
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+section.beer .to-top {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	.fa {
+		margin-right: 10px;
+		margin-top: 3px;
+		color: $gold;
+	}
+	p {
+		color: $blue;
+	}
+}
+
+/* FOOTER */
+
+footer {
+	text-align: center;
+	background: $blue;
+	padding: 20px 0;
+	color: $gold;
+	font-size: 1rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 830px) {
+	section.form .submit-form {
+		width: 75%;
+	}
+}
+
+@media all and (max-width: 730px) {
+	section.beer .beer-box {
+		width: calc(50% - 40px);
+	}
+}
+
+@media all and (max-width: 550px) {
+	section.beer #beerwork {
+		flex-direction: column;
+	}
+
+	section.beer .beer-box {
+		width: 100%;
+	}
+}
+
+
+@media all and (max-width: 480px) {
+	h1 {
+		font-size: 3.2rem;
+	}
+
+	h1.h1-top {
+		top: 115px;
+	}
+
+	h1.h1-bottom {
+		top: 150px;
+	}
+}
+
+
+@media all and (max-width: 430px) {
+	section.form .submit-form {
+		width: 90%;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h1.h1-top {
+		top: 110px;
+	}
+
+	h1.h1-bottom {
+		top: 140px;
+	}
+}
+
+@media all and (max-width: 400px) {
+	h1 {
+		font-size: 2.7rem;
+	}
+
+	h1.h1-top {
+		top: 107px;
+	}
+
+	h1.h1-bottom {
+		top: 135px;
+	}
+
+	h2 {
+		font-size: 1.6rem;
+	}
+}
+
+@media all and (max-width: 375px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	h1.h1-top {
+		top: 105px;
+	}
+
+	h1.h1-bottom {
+		top: 130px;
+	}
+
+}
+
+@media all and (max-width: 340px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	h1.h1-top {
+		top: 100px;
+	}
+
+	h1.h1-bottom {
+		top: 125px;
+	}
+
+}
+
+@media all and (max-width: 320px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	h1.h1-top {
+		top: 100px;
+	}
+
+	h1.h1-bottom {
+		top: 120px;
+	}
+
+}
+
+
+
+
+

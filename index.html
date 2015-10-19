@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Brew You</title>
+
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+	<!-- HEADER -->
+	<header id="top">
+		<div class="wrapper">
+			<img src="img/logo_img.png" alt="Logo Image">
+			<h1 class="h1-top">Brew</h1>
+			<h1 class="h1-bottom">You</h1>
+			<h2>How many brews can you choose?</h2>
+		</div> <!-- /.wrapper -->
+	</header> <!-- /header -->
+
+
+	<!-- FORM -->
+	<section class="form">
+		<div class="wrapper">
+			<form class="submit-form">
+
+				<h3>How much cash do you have?</h3>
+				<input type="number" name="price" class="cash" placeholder="$">
+
+				<h3>What kind of beer do you like?</h3>
+
+				<div class="radio-btns">
+					<div class="radio-btn">
+						<input type="radio" name="radio" value="400">
+						<label for="fancy">Fancy</label>
+					</div>
+					<div class="radio-btn">
+						<input type="radio" name="radio" value="300">
+						<label for="midrange">Mid range</label>
+					</div>
+					<div class="radio-btn">
+						<input type="radio" name="radio" value="200">
+						<label for="cheap">Cheap</label>
+					</div>
+					<div class="radio-btn">
+						<input type="radio" name="radio" checked="checked" value="100">
+						<label for="cheapest">Cheapest</label>
+					</div>
+				</div> <!-- /.radio-btns -->
+				<input type="submit">
+			</form>
+			
+		</div> <!-- /.wrapper -->
+	</section> <!-- /section.form -->
+
+
+
+	<section class="beer" id="beer">
+		<div class="wrapper">
+			<h2>Here's what you can get at the LCBO</h2>
+			<div class="container" id="beerwork"></div>
+			<a href="#top" class="to-top">
+				<i class="fa fa-arrow-circle-up"></i>
+				<p>Back to top</p>
+			</a>
+
+		</div> <!-- /.wrapper -->
+	</section> <!-- /.beer -->
+
+
+	<footer>
+		<div class="wrapper">
+			<p>Designed and developed by Mike Bell. Copyright 2015.</p>
+		</div> <!-- /.wrapper -->
+	</footer>
+
+
+	<!-- ***********
+
+	CREDITS
+
+	Bottle cap icon created by Massimo Ippolito from the Noun Project
+	Wheat icon created by The Crew at Fusionary from the Noun Project
+	Main image from stock.tookapic.com
+
+	************ -->
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
