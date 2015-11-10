@@ -11,13 +11,13 @@ $red: #CF0D0D;
 
 header {
 	background: url(../img/whitediamond.png);
-	padding: 60px 0;
+	padding: 60px 0 40px;
 	text-align: center;
 	position: relative;
 }
 
 h1 {
-	font-family: 'Fredoka One', cursive;
+	font-family: 'Droid Serif', serif;
 	font-size: 3.5rem;
 	line-height: 1;
 	text-transform: uppercase;
@@ -41,7 +41,7 @@ h1.h1-bottom {
 }
 
 h2 {
-	font-family: 'Fredoka One', sans-serif;
+	font-family: 'Droid Serif', serif;
 	font-size: 2rem;
 	line-height: 1;
 	text-transform: uppercase;
@@ -60,7 +60,7 @@ section.form {
 
 section.form .cash {
 	margin-bottom: 30px;
-	padding: 15px;
+	padding: 15px 15px 15px 24px;
 	border-radius: 10px;
 	border: 0;
 	font-size: 2.5rem;
@@ -86,6 +86,7 @@ section.form .radio-btn {
 	color: $blue;
 	label {
 		margin-left: 5px;
+		cursor: pointer;
 	}
 }
 
