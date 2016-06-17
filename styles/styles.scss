@@ -1,16 +1,21 @@
 @import 'setup';
 @import 'global';
 
-$blue: #091C4E;
-$gold: #AD8A13;
-$red: #CF0D0D;
+$blue:        #091C4E;
+$gold:        #AD8A13;
+$red:         #CF0D0D;
+$dk-primary:  #616161;
+$primary:     #9e9e9e;
+$lt-primary:  #f5f5f5;
+$divider:     #b6b6b6;
+$accent:      #009688;
 
 
 
 /* HEADER */
 
 header {
-	background: url(../img/whitediamond.png);
+	background: $lt-primary;
 	padding: 60px 0 40px;
 	text-align: center;
 	position: relative;
@@ -41,11 +46,13 @@ h1.h1-bottom {
 }
 
 h2 {
-	font-family: 'Droid Serif', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 2rem;
-	line-height: 1;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 1.2;
 	text-transform: uppercase;
-	color: $red;
+	color: $accent;
 	margin: 20px 0 0 0;	
 }
 
@@ -53,37 +60,35 @@ h2 {
 /* FORM */
 
 section.form {
-	background: url(../img/cheers.jpg) center fixed;
-	background-size: cover;
+	background: $dk-primary;
 	padding: 50px 0;
 }
 
 section.form .cash {
 	margin-bottom: 30px;
 	padding: 15px 15px 15px 24px;
-	border-radius: 10px;
-	border: 0;
+	border-radius: 3px;
+	border: $divider;
 	font-size: 2.5rem;
 	font-weight: 700;
-	color: $gold;
+	color: $dk-primary;
 	text-align: center;
 	width: 120px;
 }
 
 section.form .submit-form {
-	background: rgba(255,255,255,0.75);
+	background: $lt-primary;
 	width: 40%;
 	margin: 0 auto;
 	padding: 20px 30px;
-	border-radius: 10px;
-	border: 1px solid #979797;
+	border: 1px solid $divider;
 	text-align: center;
 }
 
 section.form .radio-btn {
 	margin: 20px 0;
 	font-weight: 400;
-	color: $blue;
+	color: $dk-primary;
 	label {
 		margin-left: 5px;
 		cursor: pointer;
@@ -92,22 +97,26 @@ section.form .radio-btn {
 
 section.form input[type=submit] {
 	margin-top: 10px;
-	padding: 10px 30px;
-	background: #F4F4F4;
-	border: 1px solid #979797;
-	border-radius: 10px;
+	padding: 10px 80px;
+	background: $accent;
+	color: white;
+	border: none;
 }
 
 section.form input[type=submit]:hover {
-	background: $gold;
-	color: $blue;
-	transition: 0.4s;
+	background: darken($accent, 5%);
+	color: white;
+	transition: 0.2s;
+}
+
+.submit-form h3 {
+	color: $dk-primary;
 }
 
 
 /* BEER */
 section.beer {
-	background: url(../img/whitediamond.png);
+	background: #eee;
 	padding: 60px;
 	display: none;
 }
@@ -120,26 +129,37 @@ section.beer h2 {
 h3 {
 	margin: 10px 0;
 	line-height: 1.2;
-	color: $blue;
+	color: $accent;
 }
 
 h3.name {
-	color: $blue;
+	color: $dk-primary;
 	font-weight: 400;
-}
-
-h3.total {
-	color: $blue;
-	background: lightgrey;
-	border: 1px solid $gold;
-	border-radius: 10px;
-	font-size: 2.5rem;
-	padding: 5px 0;
+	margin-top: 30px;
+	width: 80%;
 	margin: 0 auto;
 }
 
+h3.total {
+	color: white;
+	background: $accent;
+	font-size: 2.5rem;
+	font-weight: 300;
+	padding: 10px 0;
+	margin: 0 auto;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.12);
+}
+
 h3.price {
-	color: $gold;
+	color: $dk-primary;
+	margin-top: 30px;
+	font-weight: 300;
+}
+
+.topbar {
+	background: $accent;
+	height: 10px;
+	margin-bottom: 40px;
 }
 
 
@@ -152,13 +172,11 @@ section.beer #beerwork {
 }
 
 section.beer .beer-box {
-	// background: linear-gradient(white, #E8E8E8);
 	background: white;
 	margin-bottom: 30px;
-	padding: 20px;
+	padding-bottom: 30px;
 	width: calc(33% - 40px);
-	border: 1px solid $gold;
-	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	img {
 		border-radius: 10px;
 		margin-bottom: 10px;
@@ -173,7 +191,7 @@ section.beer .to-top {
 	.fa {
 		margin-right: 10px;
 		margin-top: 3px;
-		color: $gold;
+		color: $accent;
 	}
 	p {
 		color: $blue;
@@ -184,9 +202,9 @@ section.beer .to-top {
 
 footer {
 	text-align: center;
-	background: $blue;
+	background: $lt-primary;
 	padding: 20px 0;
-	color: $gold;
+	color: $dk-primary;
 	font-size: 1rem;
 }
 

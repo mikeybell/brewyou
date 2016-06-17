@@ -99,8 +99,9 @@ brewYou.displayBeer = function(beerList) {
 		var total = $('<h3>').addClass("total").text(value.total + " beers ");
 		var price = $('<h3>').addClass("price").text("@ " + "$" + value.price + " each");
 		var image = $('<img>').attr('src', value.image);
+		var topBar = $('<div>').addClass('topbar');
 
-		var beerBox = $('<div>').addClass("beer-box").append(image, name, total, price);
+		var beerBox = $('<div>').addClass("beer-box").append(topBar, name, image, total, price);
 		$('#beerwork').append(beerBox);
 	});
 };
