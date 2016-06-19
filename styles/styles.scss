@@ -181,16 +181,33 @@ h3.total {
 	margin: 0 auto;
 }
 
-h3.price {
+h3.price, h3.size {
 	color: $dk-primary;
 	margin-top: 30px;
 	font-weight: 300;
+	font-size: 16px;
+}
+
+.detail {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.price {
+	margin-left: 20px;
+}
+
+.size {
+	margin-right: 20px;
 }
 
 .topbar {
 	background: $accent;
-	height: 10px;
+	height: 20px;
 	margin-bottom: 40px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 
@@ -205,12 +222,12 @@ section.beer #beerwork {
 section.beer .beer-box {
 	background: white;
 	margin-bottom: 30px;
-	padding-bottom: 30px;
-	width: calc(33% - 40px);
+	padding-bottom: 20px;
+	width: calc(33% - 20px);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	img {
-		border-radius: 10px;
 		margin-bottom: 10px;
+		text-align: center;
 	}
 }
 

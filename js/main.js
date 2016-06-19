@@ -76,10 +76,11 @@ brewYou.parseBeer = function(beerList) {
 
 		var beerObject = {};
 
-		beerObject.name = value.name ;
+		beerObject.name = value.name;
 		beerObject.price = (value.price_in_cents / 100).toFixed(2);
 		beerObject.total = Math.floor(brewYou.cash * 100 / value.price_in_cents);
 		beerObject.image = value.image_thumb_url;
+		beerObject.volume = value.volume_in_milliliters;
 
 		if(value.alcohol_content > 0 && value.image_thumb_url && value.volume_in_milliliters < 550) {
 			// parsedBeer.push(value);
@@ -96,12 +97,14 @@ brewYou.displayBeer = function(beerList) {
 
 	$.each(beerList, function(i, value) {		
 		var name = $('<h3>').addClass("name").text(value.name);
-		var total = $('<h3>').addClass("total").text(value.total + " beers ");
-		var price = $('<h3>').addClass("price").text("@ " + "$" + value.price + " each");
+		var total = $('<h3>').addClass("total").text(value.total + " beers");
+		var price = $('<h3>').addClass("price").text("$" + value.price + " each");
+		var volume = $('<h3>').addClass("size").text(value.volume + " ml");
 		var image = $('<img>').attr('src', value.image);
 		var topBar = $('<div>').addClass('topbar');
+		var detail = $('<div>').addClass('detail').append(price, volume);
 
-		var beerBox = $('<div>').addClass("beer-box").append(topBar, name, image, total, price);
+		var beerBox = $('<div>').addClass("beer-box").append(topBar, name, image, total, detail);
 		$('#beerwork').append(beerBox);
 	});
 };
