@@ -21,29 +21,6 @@ header {
 	position: relative;
 }
 
-h1 {
-	font-family: 'Droid Serif', serif;
-	font-size: 3.5rem;
-	line-height: 1;
-	text-transform: uppercase;
-	color: white;
-	margin: 0;
-	text-align: center;
-}
-
-h1.h1-top {
-	position: absolute;
-	top: 125px;
-	left: 50%;
-	transform: translate(-50%);
-}
-
-h1.h1-bottom {
-	position: absolute;
-	top: 160px;
-	left: 50%;
-	transform: translate(-50%);
-}
 
 h2 {
 	font-family: 'Open Sans', sans-serif;
